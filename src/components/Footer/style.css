@@ -1,0 +1,13 @@
+.page-footer{
+    background-color: #3fb0ac;
+    text-align: left;
+    font-family: 'Alatsi', sans-serif;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px #999, 2px 2px 2px #999;
+}
+
+p {
+    font-size: 25px;
+    color: white;
+    padding-top: 10px;
+}

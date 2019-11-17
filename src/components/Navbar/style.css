@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #3fb0ac;
+    font-family: 'Alatsi', sans-serif;
+   
+    box-shadow: 0 2px 2px #999, 0 2px 2px #999;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 28px;
+}
+
+a:hover {
+    color: white;
+}

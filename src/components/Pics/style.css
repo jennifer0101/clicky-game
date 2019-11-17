@@ -1,0 +1,9 @@
+.merImage {
+    border-radius: 2px;
+    height: 170px;
+    width: 170px;
+    margin: 30px;
+    position: relative;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
