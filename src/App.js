@@ -11,13 +11,41 @@ import './App.css';
 class App extends Component {
 
   state = {
-    pics
+    pics,
+    score: 0,
+    topScore: 0,
+    clickedPics: '',
   };
+
+  shufflePics = (pics) => {
+    let i,
+        j,
+        temp;
+    for (i = pics.length -1; i > 0; i--) {
+      j = Math.floor(Math.random()*(i+1));
+      temp = pics[i];
+      pics[i] = pics[j];
+      pics[j] = temp;
+    }
+    return pics
+  } 
+
+  gameClicks = () => {
+    let newScore=this.state.score;
+    newScore = newScore+1
+    this.setState({ score: newScore, pics: this.shufflePics(this.state.pics), clickedPics: this.scoreGame(this.state.clickedPics) })
+  };
+
+  scoreGame = () => {
+    
+  }
 
   render() {
     return (
       <div>
-      <Navbar />
+      <Navbar 
+        score={this.state.score}
+      />
       <Jumbotron />
       <Wrapper>
           {this.state.pics.map(pics => (
@@ -25,6 +53,8 @@ class App extends Component {
           id={pics.id}
           key={pics.id}
           image={pics.image}
+          onClick={this.gameClicks}
+          
         />
       ))}
       </Wrapper>

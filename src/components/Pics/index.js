@@ -5,8 +5,9 @@ function MerImage(props) {
     return (
         <div className="merImage">
             <div className="img-container">
-                <img alt={props.id} src={props.image} />
+                <img alt={props.id} src={props.image} onClick={() => props.onClick()}/>
             </div>
+        
         </div>
     );
 }
