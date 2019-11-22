@@ -20,7 +20,7 @@ class MerImage extends React.Component {
             <div className="img-container">
                 <img alt={this.props.id} src={this.props.image} onClick={ this.selectedPics }/>
             </div>
-            <p>Ayy!{this.state.clicked ? "YEP" : "NOPE"}</p>
+            {/* <p>Ayy!{this.state.clicked ? "YEP" : "NOPE"}</p> */}
         
         </div>
     );
