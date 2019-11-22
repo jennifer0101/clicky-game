@@ -1,15 +1,30 @@
 import React from "react";
 import "./style.css";
 
-function MerImage(props) {
+class MerImage extends React.Component {
+    state ={
+        clicked: false
+    }
+
+    selectedPics = () => {
+        // if this has been clicked
+            // run onFail()
+        // else
+            this.setState({ clicked: true});
+            this.props.onClick();
+    }
+
+    render () {
     return (
         <div className="merImage">
             <div className="img-container">
-                <img alt={props.id} src={props.image} onClick={() => props.onClick()}/>
+                <img alt={this.props.id} src={this.props.image} onClick={ this.selectedPics }/>
             </div>
+            <p>Ayy!{this.state.clicked ? "YEP" : "NOPE"}</p>
         
         </div>
     );
+}
 }
 
 export default MerImage;

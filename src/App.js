@@ -30,6 +30,12 @@ class App extends Component {
     return pics
   } 
 
+  shame = () => {
+    // reset the score
+    // reset all states to false
+  }
+
+
   gameClicks = () => {
     let newScore=this.state.score;
     newScore = newScore+1
@@ -54,7 +60,7 @@ class App extends Component {
           key={pics.id}
           image={pics.image}
           onClick={this.gameClicks}
-          
+          onFail={this.shame}
         />
       ))}
       </Wrapper>
